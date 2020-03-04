@@ -1,0 +1,30 @@
+Maintenant que les équipes sont formées, il faut s'armer le plus rapidement possible.
+
+En cherchant dans une maison abandonnée, vous trouvez une cache d'armes ! Malheureusement, celle-ci est verrouillée et il vous faut trouver le code pour l'ouvrir, composé des symboles 0, ., |, et (espace).
+
+Vous vous souvenez alors de votre entraînement : le code dépend de l'identifiant inscrit sur la caisse. Pour la déverrouiller, il faut convertir en représentation maya le nombre qui identifie la caisse, et entrer cette combinaison pour ouvrir la cache.
+
+Le système maya est un système de numérotation en base 20, où les chiffres (que l'on appellera ici "digits") entre 1 et 19 sont formés des symboles | de valeur 5 et de . de valeur 1. Par exemple, le |||... représente le digit 18 alors que |.... représente le 9. Le 0 est un digit spécial, on le représente 0.
+
+Pour représenter des nombres plus grands que 20, on utilise plusieurs digits séparés par des espaces, avec le digit de poids faible à droite. Par exemple, 457 sera représenté par 1x(20^2) + 2x20 + 17, soit . .. |||...
+
+Ecrivez une fonction qui prend en entrée l'identifiant de la caisse et qui retourne une chaîne de caractère représentant le code pour ouvrir la caisse !
+
+Entrée
+L'entrée est un entier n (avec 0 < n < 8000) représentant l'identifiant de la cache d'armes.
+
+Sortie
+Votre fonction doit renvoyer une chaîne de caractères représentant le nombre en entier converti en notation maya.
+
+Exemples
+Entrée : 18
+Sortie : |||...
+
+Entrée : 20
+Sortie : . 0
+
+Entrée : 26
+Sortie : . |.
+
+Entrée : 457
+Sortie : . .. |||..
